@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+td , h4{text-align:center;}
+tbody tr td:first-child {text-align:left;}
+
+input[type='radio'] {visibility: hidden;}
+
+input[type='radio']:after {width:1.5em;height:1.5em;
+        border-radius: 0.75em;
+        background-color: #fff;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #8d8d8e;}
+        
+input[type='radio']:checked:after {
+        background-color: #007bff;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #8d8d8e;
+ }
+
+</style>
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+        <h4>[ESG] 투자 성향 테스트</h4>
+        <div class="table-responsive">                 
+        	<form id="research" class="form-horizontal" >
+				<table class="table">
+					<thead>
+						<tr>
+                            <td>1. 고객님의 연령은 어떻게 되십니까?</td>
+                            <td>19세 이하</td>
+                            <td>20세 ~ 40세</td>
+                            <td>41세 ~ 50세</td>
+                            <td>51세 ~ 60세</td>
+                            <td>61세 이상</td>        
+                        </tr>                    
+					</thead>
+					<tbody>
+						<tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s1" value="5"/></td>
+                            <td><input class="skin" type="radio" name="s1" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s1" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s1" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s1" value="1"/></td>        
+                        </tr>
+                        <tr>
+                            <td>2. 고객님의 연소득은 어느 정도입니까?</td>
+                            <td>5천만원이내</td>
+                            <td>7천만원이내</td>
+                            <td>1억원이내</td>
+                            <td>1억원이상</td>                                  
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s2" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s2" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s2" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s2" value="5"/></td>
+                            <td></td>          
+                        </tr>
+                        <tr>
+                            <td>3. 총자산 대비 금융자산의 비중은 어느 정도 차지합니까?</td>
+                            <td>10%미만</td>
+                            <td>10%이상 ~ 20%미만</td>
+                            <td>20%이상 ~ 30%미만</td>
+                            <td>30%이상 ~ 40%미만</td>
+                            <td>40%이상</td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s3" value="5"/></td>
+                            <td><input class="skin" type="radio" name="s3" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s3" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s3" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s3" value="1"/></td>    
+                        </tr>
+                        <tr>
+                            <td>4. 다음 중 고객님의 투자 경험과 가장 가까운 것은 어느 것입니까?(중복응답가능)</td>
+                            <td>은행 예금, 적금, 지방채, 보증채, MMF, CMA 등</td>
+                            <td>금융채, 신용도가 높은 회사채, 채권형 펀드, 원금보장형 ELS 등</td>
+                            <td>신용도 중간 등급의 회사채, 원금의 일부만 보장되는 ELS, 혼합형 펀드</td>
+                            <td>신용도가 낮은 회사채, 주식, 원금이 보장되지 않는 ELS, 시장수익률 수준의 수익을 추구하는 주식형 펀드</td>
+                            <td>ELW, 선물옵션, 시장수익률 이상의 수익을 추구하는 주식형펀드, 파생상품에 투자하는 펀드, 주식 신용거래 등</td>        
+                        </tr>
+                        <tr>
+                            <td>중복 선택 가능</td>
+                            <td><input class="skin" type="checkbox" name="s4" value="-1"/></td>
+                            <td><input class="skin" type="checkbox" name="s4" value="1"/></td>
+                            <td><input class="skin" type="checkbox" name="s4" value="3"/></td>
+                            <td><input class="skin" type="checkbox" name="s4" value="3"/></td>
+                            <td><input class="skin" type="checkbox" name="s4" value="5"/></td>    
+                        </tr>
+                        <tr>
+                            <td>5. 고객님께서 투자하고자 하는 자금의 투자 가능 기간은 얼마나 되십니까?</td>
+                            <td>6개월미만</td>
+                            <td>6개월이상 ~ 1년미만</td>
+                            <td>1년이상 ~ 2년미만</td>
+                            <td>2년이상 ~ 3년미만</td>
+                            <td>3년이상</td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s5" value="1"/></td>
+                            <td><input class="skin" type="radio" name="s5" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s5" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s5" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s5" value="5"/></td> 
+                        </tr>
+                        <tr>
+                            <td>6. 고객님의 투자 원금에 손실이 발생할 경우 감수할 수 있는 손실 수준은 어느 정도입니까?</td>
+                            <td>무슨 일이 있어도 투자 원금은 보장되어야 한다</td>
+                            <td>10% 미만까지는 손실을 감내할 수 있을 것 같다</td>
+                            <td>20% 미만까지는 손실을 감내할 수 있을 것 같다</td>
+                            <td>기대수익이 높다면 위험이 높아도 상관하지 않겠다</td>
+                            <td></td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s6" value="-2"/></td>
+                            <td><input class="skin" type="radio" name="s6" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s6" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s6" value="6"/></td>
+                        </tr>
+                        <tr>
+                            <td>7. 고객님께서는 금융 투자에 대한 본인의 지식수준이 어느 정도라고 생각하십니까?</td>
+                            <td>매우 낮은 수준 - 스스로 투자의사 결정을 내려 본 경험이 없다.</td>
+                            <td>낮은 수준 - 주식과 채권의 차이를 구분할 수 있다.</td>
+                            <td>높은 수준 - 투자 할 수 있는 대부분의 금융상품의 차이를 구별할 수 있다.</td>
+                            <td>매우 높은 수준 - 금융상품을 비롯하여 모든 투자대상 상품의 차이를 이해할 수 있는 정도</td>
+                            <td></td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s7" value="-1"/></td>
+                            <td><input class="skin" type="radio" name="s7" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s7" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s7" value="6"/></td>                           
+                        </tr>
+                        <tr>
+                            <td>8. 고객님의 투자목적은 무엇입니까?</td>
+                            <td>적극적 매매를 통한 수익을 원하며 원금을 초과하는 손실위험도 감내 가능</td>
+                            <td>적극적 매매를 통한 수익 실현 목적</td>
+                            <td>시장가격 변동 추이와 비슷한 수준의 수익 실현</td>
+                            <td>채권이자, 주식배당 정도의 수익 실현 목적</td>
+                            <td>기존 보유자산에 대한 위험 헷지 목적</td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s8" value="5"/></td>
+                            <td><input class="skin" type="radio" name="s8" value="4"/></td>
+                            <td><input class="skin" type="radio" name="s8" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s8" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s8" value="1"/></td> 
+                        </tr>
+                        <tr>
+                            <td>9. 고객님의 수입원을 가장 잘 나타내는 것은 어느 것입니까?</td>
+                            <td>현재 일정한 수입이 발생하고 있으며, 향후 현재 수준을 유지하거나 증가할 것으로 예상</td>
+                            <td>현재 일정한 수입이 발생하고 있으나, 향후 감소하거나 불안정할 것으로 에상</td>
+                            <td>현재 일정한 수입이 없으며, 연금등이 주 수입원임</td>
+                            <td></td>
+                            <td></td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s9" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s9" value="2"/></td>
+                            <td><input class="skin" type="radio" name="s9" value="1"/></td>
+                            <td></td>
+                            <td></td> 
+                        </tr>
+                        <tr>
+                            <td>10. 고객님의 투자자금 성향은 무엇입니까?</td>
+                            <td>여유자금운용</td>
+                            <td>퇴직금운용</td>
+                            <td>생계자금</td>
+                            <td>대출금</td>
+                            <td>기타</td>        
+                        </tr>
+                        <tr>
+                            <td>택 1</td>
+                            <td><input class="skin" type="radio" name="s10" value="5"/></td>
+                            <td><input class="skin" type="radio" name="s10" value="3"/></td>
+                            <td><input class="skin" type="radio" name="s10" value="-1"/></td>
+                            <td><input class="skin" type="radio" name="s10" value="-2"/></td>
+                            <td><input class="skin" type="radio" name="s10" value="0"/></td> 
+                        </tr>                        
+					</tbody>
+				</table>  
+			</form>
+			<button id="actres" class="btn btn-primary" data-title="결과보기" style="width: 100%;" data-toggle="modal" data-target="#result" >결과보기</button>   
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+
+      
+
+<div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <h4 class="modal-title custom_align" id="Heading">투자자 투자성향</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>        
+      </div>
+          <div class="modal-body">
+          <div class="form-group">
+        총점: <input class="form-control " type="text" name="sum" readonly />
+        </div>
+        <div class="form-group">
+        투자성향 : <input class="form-control " type="text" name="skintype" readonly />
+        </div>
+      </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-primary btn-lg" style="width: 100%;"> 신청하기 </button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+   </div> 
+     
+<script>
+function skinscore(){
+    var score = 0;
+    var score1 = 0;	
+	var isResult = true ;
+	var itemResult = new Array() ;
+	var itemlist = "";
+    $(".skin:checked").each(function(){
+        score+=parseInt($(this).val(),10);
+    });
+    score=score*2;
+    $("input[name=sum]").val(score);
+	var itemtypeArray = new Array("공격형","적극투자형","위험중립형","안정추구형", "안정형");
+	if(score > 80)  {		
+		$("input[name=skintype]").val(itemtypeArray[0]);
+		itemResult[0] = itemtypeArray[0];
+	}
+	else if(score > 60 && score <= 80) {
+		$("input[name=skintype]").val(itemtypeArray[1]);
+		itemResult[0] = itemtypeArray[1];
+	}
+	else if(score > 40 && score <= 60) {
+		$("input[name=skintype]").val(itemtypeArray[2]);
+		itemResult[0] = itemtypeArray[2];
+	}
+	else if(score > 20 && score <= 40) {
+		$("input[name=skintype]").val(itemtypeArray[3]);
+		itemResult[0] = itemtypeArray[3];
+	}
+	else {				
+	}
+	for(k=0;k<itemResult.length;k++){
+		if(itemResult[k]) {		
+			itemlist = itemlist + "당신의 투자 성향은 " + itemResult[k] + " 입니다.\n";
+		}		
+	}
+	$("#itemtypelist").val(itemlist);
+	var rsrchChk = $("#research input[type=radio]");
+	$(':radio').each(function () {
+		name = $(this).attr('name');
+		if (isResult && !$(':radio[name="' + name + '"]:checked').length){ isResult = false;}
+
+			console.log(isResult);
+		});
+	if(isResult) $("#actres").show();
+}
+$().ready(function(){
+	$("#actres").hide();
+    $("input").change(function(){
+        skinscore()
+    });
+});
+</script>
+</body>
+</html>
